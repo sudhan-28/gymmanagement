@@ -1,0 +1,237 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #dff6ff, #c1e1f5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General Container */
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #a09c9c;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-image: url('images/gym-background.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+}
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+nav {
+  margin-top: 20px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ff6347;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.sidebar h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.nav-links a:hover {
+  background-color: #4fc3f7;
+  color: #000;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: auto;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* Main Content & Hero Section */
+.main-content {
+  flex-grow: 1;
+  padding: 60px;
+}
+.hero-section {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.hero-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+.glass-button {
+  background: #0077ff;
+  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.glass-button:hover {
+  background: #005ecb;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Form Styling */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form h3 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+input, button {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #357ab7;
+}
+
+/* Register/Login Sections */
+#registerSection, #loginSection {
+  display: block;
+}
+
+/* User Info After Login */
+#userDetailsSection {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+#userDetailsSection p {
+  font-size: 1.2em;
+  color: #555;
+}
+#updateBtn, #deleteBtn {
+  background-color: #ff6f61;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+#updateBtn:hover, #deleteBtn:hover {
+  background-color: #e54e39;
+}
+
+/* Update Form Section */
+#updateFormSection {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#updateFormSection input {
+  width: 80%;
+  margin: 10px auto;
+}
+
+/* Notification Messages */
+.alert {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+  display: none;
+}
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}

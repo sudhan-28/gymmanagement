@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man and Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: url('images/barath.jpg')  no-repeat center center fixed; background-size: cover;padding-top:45rem ;">
+    <div class="container">
+        <header>
+            <h1>Welcome to the Gym Management System - User</h1>
+        </header>
+
+        <!-- Main User Section -->
+        <main>
+            <!-- Register Form (Visible initially) -->
+            <div id="registerSection">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" name="name" placeholder="Full Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="text" name="role" placeholder="Role" required><br>
+                    <input type="text" name="phone" placeholder="Phone" required><br>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+
+            <!-- Login Form (Visible initially) -->
+            <div id="loginSection">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <!-- Logged-In User Details Section (Initially hidden) -->
+            <div id="userDetailsSection" style="display:none;">
+                <h2>User Details</h2>
+                <p id="userName"></p>
+                <p id="userEmail"></p>
+                <p id="userPhone"></p>
+                <button  style="background-color: green;" id="updateBtn">Update</button>
+                <button style="background-color: red;" id="deleteBtn">Delete</button>
+            </div>
+
+            <!-- Update User Form (Hidden initially) -->
+            <div id="updateFormSection" style="display:none;">
+                <h2>Update User</h2>
+                <form id="updateForm">
+                    <input type="text" name="id" placeholder="User ID" required readonly><br>
+                    <input type="text" name="name" placeholder="Full Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <input type="text" name="phone" placeholder="Phone" required><br>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>Gym Management System &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="userScript.js"></script>
+</body>
+</html>

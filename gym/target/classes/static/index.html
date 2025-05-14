@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Block access if admin is not logged in
+    if (sessionStorage.getItem("adminLoggedIn") !== "true") {
+      window.location.href = "admin-login.html"; // Redirect to login page
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlexZone Gym Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('images/gym.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+}
+
+.sidebar {
+  background-color: #1f1f2e;
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.sidebar h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #00e0ff;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: #00e0ff;
+  color: #000;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 2px solid #00e0ff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  color: #00e0ff;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 16px;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+}
+
+.glass-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-right: 15px;
+  background-color: rgba(0, 224, 255, 0.2);
+  border: 1px solid #00e0ff;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s;
+}
+
+.glass-button:hover {
+  background-color: #00e0ff;
+  color: #000;
+}
+
+footer {
+  margin-top: 50px;
+  color: #ccc;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #ff1a1a;
+}
+
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div>
+        <h2>🏋️ Man & Machine Gym</h2>
+        <nav class="nav-links">
+          <a href="user.html">👤 User</a>
+          <a href="membership.html">💳 Membership</a>
+          <a href="attendance.html">🕒 Attendance</a>
+          <a href="track-attendance.html">📅 Track Attendance</a>
+        </nav>
+      </div>
+      <img src="images/logo.jpg" alt="Profile" class="profile-img">
+    </aside>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <h1 style="color: black;">Welcome, Admin 👋</h1>
+        <p style="color: white;">Track your members, schedules, and attendance with a sleek control panel.</p>
+        <a href="user.html" class="glass-button">Open Dashboard</a>
+        <a href="track-attendance.html" class="glass-button">Track Attendance</a>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Man & Machine Gym | Powered by Sudhan 💪</p>
+        <button onclick="logoutAdmin()">Logout</button>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    function logoutAdmin() {
+      sessionStorage.removeItem("adminLoggedIn");
+      window.location.href = "admin-login.html";
+    }
+  </script>
+</body>
+</html>

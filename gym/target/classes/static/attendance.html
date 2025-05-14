@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: url('images/barath.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .attendance-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .attendance-container h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .attendance-container p {
+      margin-bottom: 25px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    form input, form button {
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #357ab7;
+    }
+  </style>
+</head>
+<body>
+  <div class="attendance-container">
+    <h2>Mark Attendance</h2>
+    <p>Fill in the details to mark attendance for the gym members.</p>
+    <form id="attendanceForm">
+      <input type="number" name="userId" placeholder="User ID" required />
+      <input type="date" name="date" required />
+      <button type="submit">Mark</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
